@@ -4,6 +4,8 @@ This repository shows how the new attribute `constrain_to` should work. The conc
 
 > Because testonly is enforced at build time, not run time, and propagates virally through the dependency tree, it should be applied judiciously. For example, stubs and fakes that are useful for unit tests may also be useful for integration tests involving the same binaries that will be released to production, and therefore should probably not be marked testonly. Conversely, rules that are dangerous to even link in, perhaps because they unconditionally override normal behavior, should definitely be marked testonly.
 
+The official feature request is https://github.com/bazelbuild/bazel/issues/13740.
+
 ## Constraints
 
 From https://docs.bazel.build/versions/main/platforms.html:
